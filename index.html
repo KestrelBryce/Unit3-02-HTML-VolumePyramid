@@ -1,16 +1,98 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Volume-pyramid" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="KestrelBryce" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- favicon -->
+    <link rel="PYRAMID_FAVICON" sizes="180x180" href="./fav_index/PYRAMID_FAVICON.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/PYRAMID_FAVICON.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/PYRAMID_FAVICON.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <!-- page title -->
+    <title>Volume of a pyramid in javascript</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Pyramid volume calculator</span>
+        </div>
+      </header>
 
-<body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+      <p>Enter the dimensions of your pyramid:</p>
 
+      <!-- image -->
+      <img src="./fav_index/PYRAMID_FORMULA.svg"
+      width= "250"
+      height= "150">
+        
+      <!-- User input -->
+      
+      <!-- Side a textbox -->
+      <p>Pyramid side a in cm:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="Side-a-here"
+            />
+            <label class="mdl-textfield__label" for="Side-a-here">Numbers go here...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+          <!-- The assignment said to find the volume with sides a, b, and the height. The assignment and every other exercise we did on the worksheet only used side a and the height, though? I'm assuming that that was a typo. If side a and side b had different values then it would be a rectangular pyramid and not a square pyramid. -->
+        
+        <!-- Side b textbox -->
+        <!-- <p>Pyramid side b in cm:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="Side-b-here"
+            />
+            <label class="mdl-textfield__label" for="Side-b-here">Numbers go here... </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div> -->
+
+          <!-- Height textbox -->
+      
+        </p>
+              <p>Pyramid height in cm:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="Height-here"
+            />
+            <label class="mdl-textfield__label" for="Height-here">Numbers go here... </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+        <!-- volume calculate button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="javascript:Calculate_volume()">
+          <p>Calculate volume</p>
+        </button>
+        <br />
+        <p>
+          <div id="Pyramid-results">
+
+          </div>
+        </p>
+      </main>
+    </div>
+  </body>
 </html>
